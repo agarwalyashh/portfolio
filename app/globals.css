@@ -7,6 +7,7 @@
   --color-accent: #0f9;
   --color-accent-hover:#00e187;
   --breakpoint-sm: 575px;
+  --breakpoint-xs:400px;
 }
 
 .dots-3 {
@@ -31,4 +32,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+main {
+  z-index: auto;
 }

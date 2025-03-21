@@ -1,10 +1,14 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { RxCross2 } from "react-icons/rx";
+import { CiMenuFries } from "react-icons/ci";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 function Navigation() {
   const path = usePathname();
+  const [sidebar, setSidebar] = useState(false);
 
   const links = [
     {
@@ -26,7 +30,7 @@ function Navigation() {
       <Link href="/" className="text-xl sm:text-2xl lg:text-3xl font-bold">
         Yash<span className="text-accent">.</span>
       </Link>
-      <motion.ul className="flex items-center gap-4 sm:gap-6 xl:gap-8 text-xs sm:text-lg lg:text-xl font-semibold">
+      <motion.ul className="sm:flex items-center sm:gap-6 xl:gap-8 text-xs sm:text-lg lg:text-xl font-semibold hidden">
         {links.map((link) => (
           <motion.li
             whileTap={{ scale: 0.8 }}
@@ -40,6 +44,41 @@ function Navigation() {
           </motion.li>
         ))}
       </motion.ul>
+      <div className="sm:hidden">
+        <span>
+          <CiMenuFries size={24} onClick={() => setSidebar(!sidebar)} />
+        </span>
+      </div>
+      {sidebar && (
+        <div className="fixed top-0 right-0 h-screen bg-secondary w-[40%] z-11">
+          <div className="flex justify-end">
+            <RxCross2
+              size={24}
+              className="mr-4 mt-4 text-accent"
+              onClick={() => setSidebar(false)}
+            />
+          </div>
+          <div className="p-4 flex flex-col justify-center items-center">
+            <Link href="/" className="text-xl font-bold my-8">
+              Yash<span className="text-accent">.</span>
+            </Link>
+            <motion.ul className="flex flex-col gap-5 items-center text-xl font-semibold">
+              {links.map((link) => (
+                <motion.li
+                  key={link.name}
+                  className={` ${
+                    link.path === path ? "text-accent underline" : ""
+                  }`}
+                >
+                  <Link href={link.path} onClick={() => setSidebar(false)}>
+                    {link.name}
+                  </Link>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

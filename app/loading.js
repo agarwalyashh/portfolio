@@ -1,7 +1,8 @@
+import Loader from "./_components/Loader"
+
 function loading() {
   return (
-    <div className="mx-auto dots-3">
-    </div>
+    <Loader/>
   )
 }
 

@@ -6,7 +6,7 @@ import React from "react";
 function Socials() {
   return (
     <div className="space-y-4">
-      <h1 className="text-xl md:text-2xl">Connect with me</h1>
+      <h1 className="text-xl md:text-3xl xl:text-4xl font-bold md:underline">Connect with me</h1>
       <ul className="flex gap-6">
         <li className="hover:border-accent-hover border rounded-full group cursor-pointer">
           <a href="https://github.com/agarwalyashh" target="_blank">

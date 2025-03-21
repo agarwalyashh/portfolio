@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-primary ${jetBrainsMono.className} text-textcolor lg:w-[80%] w-[90%] mx-auto my-5 `}
+        className={`bg-primary ${jetBrainsMono.className} text-textcolor lg:w-[80%] w-[90%] mx-auto`}
       >
         <ParticlesComponent id="particles"/>
-        <header className="relative z-10">
+        <header className="relative z-10 my-5 ">
           <Navigation />
         </header>
         <main className="relative z-10">{children}</main>
