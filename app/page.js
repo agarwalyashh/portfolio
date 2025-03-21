@@ -1,14 +1,13 @@
 import Image from "next/image";
 import vector from "../app/public/vector.jpeg";
-import { Download } from "lucide-react";
+import { MdOutlineFileDownload } from "react-icons/md";
 import Socials from "./_components/Socials";
-import About from "./_components/About";
 import Github from "./_components/Github";
 
 export default function Home() {
   return (
     <div>
-      <section className="flex md:grid md:grid-cols-2 sm:gap-6 lg:gap-10 gap-10 my-24">
+      <section className="flex md:grid md:grid-cols-2 sm:gap-6 lg:gap-10 gap-10 my-12 sm:my-18 lg:my-24">
         <div className="space-y-10">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-wide">
             Hello I&apos;m <br />
@@ -27,7 +26,7 @@ export default function Home() {
             >
               <span className="whitespace-nowrap">DOWNLOAD CV</span>
               <span>
-                <Download />
+                <MdOutlineFileDownload size={24} />
               </span>
             </a>
           </div>

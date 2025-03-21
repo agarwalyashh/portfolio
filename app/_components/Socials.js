@@ -1,4 +1,6 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { PiGithubLogoBold } from "react-icons/pi";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { CiMail } from "react-icons/ci";
 import React from "react";
 
 function Socials() {
@@ -8,7 +10,7 @@ function Socials() {
       <ul className="flex gap-6">
         <li className="hover:border-accent-hover border rounded-full group cursor-pointer">
           <a href="https://github.com/agarwalyashh" target="_blank">
-            <Github className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
+            <PiGithubLogoBold size={24} className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
           </a>
         </li>
         <li className="hover:border-accent-hover border rounded-full group cursor-pointer">
@@ -16,12 +18,12 @@ function Socials() {
             href="https://www.linkedin.com/in/agarwalyashh2004/"
             target="_blank"
           >
-            <Linkedin className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
+            <SlSocialLinkedin size={24} className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
           </a>
         </li>
         <li className="hover:border-accent-hover border rounded-full group cursor-pointer">
           <a href="mailto:agarwalyashhh004@gmail.com" target="_blank">
-            <Mail className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
+            <CiMail size={24} className="sm:m-2 m-1 group-hover:text-accent-hover group-hover:scale-[1.15]" />
           </a>
         </li>
       </ul>

@@ -1,5 +1,4 @@
-"use client";
-import { AlignJustify } from "lucide-react";
+"use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -27,7 +26,7 @@ function Navigation() {
       <Link href="/" className="text-xl sm:text-2xl lg:text-3xl font-bold">
         Yash<span className="text-accent">.</span>
       </Link>
-      <motion.ul className="sm:flex items-center sm:gap-6 xl:gap-8 text-lg lg:text-xl font-semibold hidden">
+      <motion.ul className="flex items-center gap-4 sm:gap-6 xl:gap-8 text-xs sm:text-lg lg:text-xl font-semibold">
         {links.map((link) => (
           <motion.li
             whileTap={{ scale: 0.8 }}
@@ -41,9 +40,6 @@ function Navigation() {
           </motion.li>
         ))}
       </motion.ul>
-      <button className="sm:hidden hover:bg-accent-hover">
-        <AlignJustify />
-      </button>
     </nav>
   );
 }
